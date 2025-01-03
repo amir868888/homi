@@ -1,0 +1,445 @@
+/* style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .logo img {
+    max-width: 80px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #666;
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #45a049;
+}
+
+#hero {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#hero button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Loader styles */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.loader {
+  width: 5em;
+  height: 5em;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  animation: spin 3s infinite;
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(-360deg);
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: rotate(-720deg);
+    border-radius: 0%;
+  }
+}
+/* استایل‌های موجود */
+body {
+    font-family: 'Roboto', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+header .logo img {
+    max-width: 80px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* استایل‌های فرم جستجو */
+form {
+    position: relative;
+    width: 100%;
+    max-width: 17em;
+}
+
+.input {
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25em inset;
+    caret-color: #255ff4;
+    width: 2em;
+    height: 2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all calc(1s * 0.5) linear;
+    color: black;
+    font: 1em/1.5 Hind, sans-serif;
+}
+
+.input:focus, .input:valid {
+    background: powderblue;
+    border-radius: 0.25em;
+    box-shadow: none;
+    padding: 0.75em 1em;
+    transition-duration: calc(1s * 0.25);
+    transition-delay: calc(1s * 0.25);
+    width: 100%;
+    height: 3em;
+}
+
+.input:focus {
+    animation: showCaret 1s steps(1);
+    outline: transparent;
+}
+
+.input:focus + .caret, .input:valid + .caret {
+    animation: handleToCaret 1s linear;
+    background: transparent;
+    width: 1px;
+    height: 1.5em;
+    transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+}
+
+.input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+label {
+    color: #e3e4e8;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.caret {
+    background: black;
+    border-radius: 0 0 0.125em 0.125em;
+    margin-bottom: -0.6em;
+    width: 0.25em;
+    height: 1em;
+    transform: translate(0,-1em) rotate(-45deg) translate(0,0.875em);
+    transform-origin: 50% 0;
+}
+
+/* انیمیشن‌ها */
+@keyframes showCaret {
+    from {
+        caret-color: transparent;
+    }
+
+    to {
+        caret-color: #255ff4;
+    }
+}
+
+@keyframes handleToCaret {
+    from {
+        background: currentColor;
+        width: 0.25em;
+        height: 1em;
+        transform: translate(0,-1em) rotate(-45deg) translate(0,0.875em);
+    }
+
+    25% {
+        background: currentColor;
+        width: 0.25em;
+        height: 1em;
+        transform: translate(0,-1em) rotate(-180deg) translate(0,0.875em);
+    }
+
+    50%, 62.5% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0,-1em) rotate(-180deg) translate(7.5em,2.5em);
+    }
+
+    75%, 99% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+    }
+
+    87.5% {
+        background: #255ff4;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0,-1em) rotate(-180deg) translate(7.5em,0.125em);
+    }
+
+    to {
+        background: transparent;
+        width: 1px;
+        height: 1.5em;
+        transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+    }
+}
+
+/* استایل‌های فرم ورود/عضویت */
+#login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+}
+
+form button {
+    width: 80%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.signup {
+    transform: translateY(-100%);
+}
+
+#chk:checked ~ .form-container .signup {
+    transform: translateY(0);
+}
+
+#chk:checked ~ .form-container .login {
+    transform: translateY(100%);
+}
+
+.login {
+    transform: translateY(0);
+}
+
+
+

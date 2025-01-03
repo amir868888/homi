@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homi Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showLoaderAndRedirect(url) {
+            document.querySelector(".loader-overlay").style.display = "flex";
+            setTimeout(() => {
+                window.location.href = url;
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="your-image-url.jpg" alt="Logo">
+            </div>
+            <h1>Homi Products</h1>
+            <nav>
+                <a href="javascript:void(0)" onclick="showLoaderAndRedirect('products.html')">محصولات</a>
+                <a href="#how-to-buy" onclick="showLoader()">نحوه خرید</a>
+                <a href="javascript:void(0)" onclick="showLoaderAndRedirect('login.html')">ورود/عضویت</a>
+                <!-- افزودن فرم جستجو -->
+    </header>
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <main class="container">
+        <section id="hero">
+            <h2>به فروشگاه آنلاین ما خوش آمدید!</h2>
+            <p>بهترین محصولات را با قیمت‌های مناسب از ما بخرید.</p>
+            <button onclick="showLoaderAndRedirect('products.html')">مشاهده محصولات</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Homi Products. تمامی حقوق محفوظ است.</p>
+    </footer>
+</body>
+</html>
